@@ -1,4 +1,4 @@
-package com.egorlobach.firebasechat.Model;
+package com.egorlobach.firebasechat.model;
 
 public class User {
     private String id;

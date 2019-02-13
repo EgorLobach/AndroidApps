@@ -11,12 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".LoginActivity"
-            android:parentActivityName=".StartActivity"/>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity"
-            android:parentActivityName=".StartActivity"/>
-        <activity android:name=".StartActivity">
+        <activity android:name=".activities.LoginActivity"
+            android:parentActivityName=".activities.StartActivity"/>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.RegisterActivity"
+            android:parentActivityName=".activities.StartActivity"/>
+        <activity android:name=".activities.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

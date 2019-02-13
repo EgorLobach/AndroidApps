@@ -1,10 +1,11 @@
-package com.egorlobach.firebasechat;
+package com.egorlobach.firebasechat.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.egorlobach.firebasechat.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class StartActivity extends AppCompatActivity implements View.OnClickListener {
