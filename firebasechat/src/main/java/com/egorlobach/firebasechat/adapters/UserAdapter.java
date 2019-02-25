@@ -7,16 +7,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.egorlobach.firebasechat.R;
 import com.egorlobach.firebasechat.activities.MessageActivity;
-import com.egorlobach.firebasechat.holders.ViewHolder;
 import com.egorlobach.firebasechat.model.User;
 
 import java.util.List;
 
-public class UserAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     private Context mContext;
     private List<User> mUsers;
@@ -54,5 +55,18 @@ public class UserAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public int getItemCount() {
         return mUsers.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView username;
+        public ImageView profileImage;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            username = itemView.findViewById(R.id.username);
+            profileImage = itemView.findViewById(R.id.profileImage);
+        }
     }
 }
