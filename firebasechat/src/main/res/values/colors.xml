@@ -5,6 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="toolbar">#046D5F</color>
     <color name="start_background">#E8027964</color>
-    <color name="chatsFragmentBackground">#808080</color>
+    <color name="chatsFragmentBackground">#FFFFFF</color>
     <color name="usersFragmentBackground">#E7E3E3</color>
 </resources>
