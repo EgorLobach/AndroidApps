@@ -21,10 +21,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     private Context mContext;
     private List<User> mUsers;
+    private boolean ischat;
 
-    public UserAdapter(Context mContext, List<User> mUsers) {
+    public UserAdapter(Context mContext, List<User> mUsers, boolean ischat) {
         this.mContext = mContext;
         this.mUsers = mUsers;
+        this.ischat = ischat;
     }
 
     @NonNull
@@ -41,6 +43,19 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         if(user.getImageURL().equals("default"))
             viewHolder.profileImage.setImageResource(R.mipmap.ic_launcher);
         else Glide.with(mContext).load(user.getImageURL()).into(viewHolder.profileImage);
+
+        if(ischat){
+            if(user.getStatus().equals("online")){
+                viewHolder.onlineImage.setVisibility(View.VISIBLE);
+                viewHolder.offlineImage.setVisibility(View.GONE);
+            } else {
+                viewHolder.onlineImage.setVisibility(View.GONE);
+                viewHolder.offlineImage.setVisibility(View.VISIBLE);
+            }
+        } else {
+            viewHolder.onlineImage.setVisibility(View.GONE);
+            viewHolder.offlineImage.setVisibility(View.GONE);
+        }
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +76,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
         public TextView username;
         public ImageView profileImage;
+        private ImageView onlineImage;
+        private ImageView offlineImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             username = itemView.findViewById(R.id.username);
             profileImage = itemView.findViewById(R.id.profileImage);
+            onlineImage = itemView.findViewById(R.id.onlineImage);
+            offlineImage = itemView.findViewById(R.id.offlineImage);
         }
     }
 }

@@ -7,4 +7,6 @@
     <color name="start_background">#E8027964</color>
     <color name="chatsFragmentBackground">#FFFFFF</color>
     <color name="usersFragmentBackground">#E7E3E3</color>
+    <color name="online">#05df29</color>
+    <color name="offline">#bfbfbf</color>
 </resources>
