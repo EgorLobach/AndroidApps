@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.egorlobach.firebasechat.adapters.ViewPagerAdapter;
 import com.egorlobach.firebasechat.fragments.ChatsFragment;
+import com.egorlobach.firebasechat.fragments.ProfileFragment;
 import com.egorlobach.firebasechat.fragments.UsersFragment;
 import com.egorlobach.firebasechat.model.User;
 import com.egorlobach.firebasechat.R;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
         viewPagerAdapter.addFragment(new UsersFragment(), "Users");
+        viewPagerAdapter.addFragment(new ProfileFragment(), "Profile");
 
         viewPager.setAdapter(viewPagerAdapter);
 
