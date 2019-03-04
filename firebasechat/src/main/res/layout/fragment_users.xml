@@ -6,7 +6,15 @@
     android:background="@color/usersFragmentBackground"
     tools:context=".fragments.UsersFragment">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:hint="@string/search"
+        android:id="@+id/searchUser"/>
+
     <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/searchUser"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"/>
