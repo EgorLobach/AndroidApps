@@ -16,4 +16,7 @@
     <string name="type_a_message">Type a message...</string>
     <string name="profile">Profile</string>
     <string name="search">Search</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="reset">Reset</string>
+    <string name="reset_password">Reset password</string>
 </resources>
